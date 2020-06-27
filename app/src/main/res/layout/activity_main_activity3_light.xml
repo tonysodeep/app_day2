@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3Light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage profile"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/colortextlight"
+            android:textSize="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintRight_toLeftOf="@id/ib_go"
+            android:src="@drawable/textingimageicon"
+            tools:ignore="MissingConstraints" />
+        <ImageButton
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@null"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            android:id="@+id/ib_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_appday2"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@id/line1"
+        style="@style/lineappday2back"
+        android:layout_marginTop="55dp"
+        tools:ignore="MissingConstraints"
+        android:background="#958F8F"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textviewinleftlight"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        android:text="Parental control"
+        android:layout_marginTop="18dp"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/set_thread"
+        android:layout_width="110dp"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:background="#03C5F0"
+        android:text="Set threashold"
+        android:layout_marginTop="10dp"
+        android:textSize="8dp"
+        android:textColor="@color/colortextchangeUserdark"
+        />
+    <TextView
+        android:id="@+id/tv_threashold"
+        app:layout_constraintTop_toBottomOf="@+id/set_thread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Current threshold TVY"
+        android:layout_marginRight="20dp"
+        android:textColor="#6C6767"
+        android:textSize="13dp"
+        android:layout_marginTop="5dp"/>
+    <View
+        android:id="@+id/line2"
+        style="@style/lineappday2back"
+        android:layout_marginTop="130dp"
+        tools:ignore="MissingConstraints"
+        android:background="#958F8F"/>
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        style="@style/textviewinleftblack"
+        android:layout_marginTop="18dp"
+        android:text="downloads"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_downWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textviewinleftlight"
+        app:layout_constraintTop_toBottomOf="@id/tv_download"
+        android:layout_marginTop="15dp"
+        android:text="Download only in Wifi"
+        tools:ignore="MissingConstraints" />
+    <Switch
+        android:id="@+id/switch1"
+        style="@style/switchinappday2"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintTop_toTopOf="@id/line2"
+        android:layout_marginTop="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line3"
+        style="@style/lineappday2back"
+        android:layout_marginTop="220dp"
+        tools:ignore="MissingConstraints"
+        android:background="#958F8F"/>
+
+    <TextView
+        android:id="@+id/tv_OPT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        style="@style/textviewinleftblack"
+        android:layout_marginTop="18dp"
+        android:text="OPT-in/ opt-out"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textviewinleftlight"
+        app:layout_constraintTop_toBottomOf="@id/tv_OPT"
+        android:layout_marginTop="10dp"
+        android:text="Activiate option to get recommendations"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switch2"
+        style="@style/switchinappday2"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintTop_toTopOf="@id/line3"
+        android:layout_marginTop="45dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/line4"
+        style="@style/lineappday2back"
+        android:layout_marginTop="310dp"
+        tools:ignore="MissingConstraints"
+        android:background="#958F8F"/>
+    <TextView
+        android:id="@+id/backgroud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line4"
+        style="@style/textviewinleftblack"
+        android:layout_marginTop="18dp"
+        android:text="background color"
+        tools:ignore="MissingConstraints" />
+
+    <RadioButton
+        android:id="@+id/radibt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroud"
+        android:layout_marginLeft="20dp"
+        android:text="Background light"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/colortextlight"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroud"
+        android:layout_marginRight="20dp"
+        android:text="Background black"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/colortextlight"/>
+
+    <TextView
+        android:id="@+id/tv_mydevice"
+        android:textAllCaps="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radibt_1"
+        android:paddingLeft="30dp"
+        android:text="My devices"
+        android:background="#C6C7CB"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="@color/colortextlight"/>
+    <TextView
+        android:id="@+id/tv_bottom1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textviewinleftlight"
+        android:text="PC_Chrome_29d7"
+        app:layout_constraintTop_toBottomOf="@id/tv_mydevice"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imbt1"
+        style="@style/closebt"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_mydevice"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="384dp"
+        />
+    <ImageButton
+        android:id="@+id/imbt2"
+        style="@style/closebt"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        app:layout_constraintTop_toBottomOf="@id/imbt1"
+        android:layout_marginTop="40dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="384dp" />
+    <ImageButton
+        android:id="@+id/imbt3"
+        style="@style/closebt"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        app:layout_constraintTop_toBottomOf="@id/imbt2"
+        android:layout_marginTop="40dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="384dp" />
+    <TextView
+        android:id="@+id/tv_bottom2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textviewinleftlight"
+        android:text="PV_Chrome_61dc"
+        app:layout_constraintTop_toBottomOf="@id/tv_bottom1"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_bottom3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textviewinleftlight"
+        android:text="PC_Chrome_2885"
+        app:layout_constraintTop_toBottomOf="@id/tv_bottom2"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
